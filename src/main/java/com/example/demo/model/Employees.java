@@ -29,6 +29,9 @@ public class Employees {
 		this.title = title;
 		this.workPhone = workPhone;
 	}
+	
+	public Employees() {
+	}
 
 	public void setEmployeeId(int employeeId) {
 		this.employeeId = employeeId;

@@ -38,6 +38,9 @@ public class Orders {
 		this.employees = employees;
 	}
 	
+	public Orders() {
+	}
+	
 	public int getOrderId() {
 		return OrderId;
 	}

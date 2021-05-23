@@ -26,6 +26,9 @@ public class Customers {
 		this.phoneNumber = phoneNumber;
 	}
 	
+	public Customers() {
+	}
+	
 	public int getCustomerId() {
 		return customerId;
 	}
