@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "order")
+@Table (name = "orders")
 
 public class Orders {
 	
@@ -28,5 +28,51 @@ public class Orders {
 	@ManyToOne
 	@JoinColumn(name = "employee_id")
 	private Employees employees;
+	
+	public Orders(Timestamp orderDate, int quantity, int unitPrice, Customers customers, Employees employees) {
+		super();
+		this.orderDate = orderDate;
+		this.quantity = quantity;
+		this.unitPrice = unitPrice;
+		this.customers = customers;
+		this.employees = employees;
+	}
+	
+	public int getOrderId() {
+		return OrderId;
+	}
+	public void setOrderId(int orderId) {
+		OrderId = orderId;
+	}
+	public Timestamp getOrderDate() {
+		return orderDate;
+	}
+	public void setOrderDate(Timestamp orderDate) {
+		this.orderDate = orderDate;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public int getUnitPrice() {
+		return unitPrice;
+	}
+	public void setUnitPrice(int unitPrice) {
+		this.unitPrice = unitPrice;
+	}
+	public Customers getCustomers() {
+		return customers;
+	}
+	public void setCustomers(Customers customers) {
+		this.customers = customers;
+	}
+	public Employees getEmployees() {
+		return employees;
+	}
+	public void setEmployees(Employees employees) {
+		this.employees = employees;
+	}
 	
 }
