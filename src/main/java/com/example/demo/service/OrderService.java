@@ -92,8 +92,7 @@ public class OrderService implements OrdersRepository{
 
 	@Override
 	public <S extends Orders> S save(S entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return ordersRepository.save(entity);
 	}
 
 	@Override
