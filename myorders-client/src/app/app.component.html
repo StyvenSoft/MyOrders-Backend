@@ -1,2 +1,13 @@
 <h1>Welcome</h1>
+
+<div class="registerForm">
+    <h2>Create Order</h2>
+    <form [formGroup]="orderForm" (ngSubmit)="save()">
+        <div class="form-group">
+            <label for="orderdate">Order Date</label>
+            <input type="datetime-local" class="form-control" formControlName="orderDate">
+        </div>
+    </form>
+</div>
+
 <router-outlet></router-outlet>

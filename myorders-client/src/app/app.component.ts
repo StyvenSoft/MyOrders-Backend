@@ -9,11 +9,11 @@ import { OrdersService } from './services/orders/orders.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  
+export class AppComponent implements OnInit {
+
   orderForm: FormGroup;
 
-  constructor (
+  constructor(
     public fb: FormBuilder,
     public customersService: CustomersService,
     public employeesService: EmployeesService,
@@ -23,9 +23,13 @@ export class AppComponent implements OnInit{
   }
   ngOnInit(): void {
     this.orderForm = this.fb.group({
-      orderDate : ['', Validators.required],
-      quantity : ['', Validators.required],
-      unitPrice : ['', Validators.required],
+      orderDate: ['', Validators.required],
+      quantity: ['', Validators.required],
+      unitPrice: ['', Validators.required],
     })
+  }
+
+  save(): void {
+
   }
 }
