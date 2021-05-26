@@ -12,6 +12,8 @@ import { OrdersService } from './services/orders/orders.service';
 export class AppComponent implements OnInit {
 
   orderForm: FormGroup;
+  customers: any;
+  employees: any;
 
   constructor(
     public fb: FormBuilder,
@@ -26,7 +28,11 @@ export class AppComponent implements OnInit {
       orderDate: ['', Validators.required],
       quantity: ['', Validators.required],
       unitPrice: ['', Validators.required],
-    })
+      customer: ['', Validators.required],
+      employee: ['', Validators.required],
+    });
+
+    this.customersService
   }
 
   save(): void {

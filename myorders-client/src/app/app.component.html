@@ -7,6 +7,28 @@
             <label for="orderdate">Order Date</label>
             <input type="datetime-local" class="form-control" formControlName="orderDate">
         </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" formControlName="quantity">
+        </div>
+        <div class="form-group">
+            <label for="unitPrice">Unit Price</label>
+            <input type="number" class="form-control" formControlName="unitPrice">
+        </div>
+        <div class="form-group">
+            <label for="customer">Employees</label>
+            <select name="customer" id="customer" class="form-control" formControlName="customer">
+                <option value="item.id" *ngFor="let item of customers"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="employee">Employees</label>
+            <select name="employee" id="employee" class="form-control" formControlName="employee">
+                <option value="item.id" *ngFor="let item of employees"></option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
     </form>
 </div>
 
