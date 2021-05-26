@@ -32,7 +32,21 @@ export class AppComponent implements OnInit {
       employee: ['', Validators.required],
     });
 
-    this.customersService
+    this.customersService.getAllCustomers().subscribe(resp => {
+      this.customers = resp;
+      console.log(resp);
+    },
+      error => { console.error(error);
+       }
+    )
+
+    this.employeesService.getAllEmployees().subscribe(resp => {
+      this.employees = resp;
+      console.log(resp);
+    },
+      error => { console.error(error);
+       }
+    )
   }
 
   save(): void {

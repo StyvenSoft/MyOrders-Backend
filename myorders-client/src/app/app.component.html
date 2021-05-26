@@ -18,13 +18,13 @@
         <div class="form-group">
             <label for="customer">Employees</label>
             <select name="customer" id="customer" class="form-control" formControlName="customer">
-                <option value="item.id" *ngFor="let item of customers"></option>
+                <option value="item.id" *ngFor="let item of customers">{{item.companyName}}</option>
             </select>
         </div>
         <div class="form-group">
             <label for="employee">Employees</label>
             <select name="employee" id="employee" class="form-control" formControlName="employee">
-                <option value="item.id" *ngFor="let item of employees"></option>
+                <option value="item.id" *ngFor="let item of employees">{{item.firstName}}</option>
             </select>
         </div>
 

@@ -13,7 +13,7 @@ export class CustomersService {
     private httpClient : HttpClient
   ) { }
 
-  private getAllCustomers(): Observable<any>{
+  public getAllCustomers(): Observable<any>{
     return this.httpClient.get(this.API_SERVER);
   }
 }
