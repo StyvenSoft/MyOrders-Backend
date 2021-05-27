@@ -34,7 +34,6 @@ export class AppComponent implements OnInit {
 
     this.customersService.getAllCustomers().subscribe(resp => {
       this.customers = resp;
-      console.log(resp);
     },
       error => { console.error(error);
        }
@@ -42,7 +41,6 @@ export class AppComponent implements OnInit {
 
     this.employeesService.getAllEmployees().subscribe(resp => {
       this.employees = resp;
-      console.log(resp);
     },
       error => { console.error(error);
        }

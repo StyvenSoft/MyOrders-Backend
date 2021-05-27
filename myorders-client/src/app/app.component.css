@@ -1,9 +1,13 @@
 .registerForm {
     padding-left: 30%;
     padding-right: 30%;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .form-group {
     margin-top: 25px;
+}
+
+h1 {
+    text-align: center;
 }
