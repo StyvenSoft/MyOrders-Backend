@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
 
   save(): void {
     this.ordersService.saveOrders(this.orderForm.value).subscribe(resp => {
-
+      console.log(this.orderForm.value);
     }, 
       error => { console.error(error) }
     )
